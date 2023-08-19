@@ -1,12 +1,16 @@
 {
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
+    "jsx": "react",
+    "skipLibCheck": true ,
     "baseUrl": "./src",
     "paths": {
       "screen/*": ["screen/*"],
       "route/*": ["route/*"],
       "helpers/*": ["helpers/*"],
-      "assets/*": ["assets/*"]
+      "assets/*": ["assets/*"],
+      "components/*": ["components/*"],
+      "store/*": ["store/*"]
     }
   }
 }
