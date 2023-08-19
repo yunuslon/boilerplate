@@ -10,6 +10,8 @@ module.exports = {
           route: './src/route',
           helpers: './src/helpers',
           assets: './src/assets',
+          components: './src/components',
+          store: './src/store',
         },
       },
     ],

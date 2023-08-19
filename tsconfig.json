@@ -6,7 +6,9 @@
       "screen/*": ["screen/*"],
       "route/*": ["route/*"],
       "helpers/*": ["helpers/*"],
-      "assets/*": ["assets/*"]
+      "assets/*": ["assets/*"],
+      "components/*": ["components/*"],
+      "store/*": ["store/*"]
     }
   }
 }
