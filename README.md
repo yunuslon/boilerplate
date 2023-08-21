@@ -6,6 +6,7 @@ Proyek Boilerplate React Native yang siap digunakan untuk memulai pengembangan a
 
 - **Navigasi:** Terintegrasi dengan React Navigation untuk manajemen navigasi yang mudah.
 - **State Management:** Menggunakan Redux dan Redux Toolkit untuk manajemen state aplikasi.
+- **redux-persist:** Pustaka Redux yang menyediakan solusi yang mudah digunakan untuk menyimpan state Redux Anda dalam penyimpanan persisten seperti localStorage atau AsyncStorage..
 - **Komponen UI:** Menggunakan komponen UI dari React Native Elements untuk antarmuka yang menarik.
 - **API Requests:** Menerapkan manajemen permintaan HTTP menggunakan axios.
 - **Redux Flipper:** Integrasi dengan Redux Flipper untuk memantau state Redux di alat Flipper.
@@ -20,7 +21,7 @@ Pastikan Anda telah menginstal Node.js dan Yarn di sistem Anda sebelum memulai.
 1. **Clone Repositori:** Salin repositori ini ke komputer Anda menggunakan 
 
 ```bash
-git clone https://github.com/yunuslon/boilerplate
+git clone https://github.com/yunuslon/boilerplate.git
 cd boilerplate
 ```
 2. **Instal Dependensi:** Pasang semua dependensi proyek menggunakan

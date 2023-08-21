@@ -1,14 +1,17 @@
 import React from 'react';
 import {Provider as ProviderRedux} from 'react-redux';
-
+import {PersistGate} from 'redux-persist/integration/react';
 import Route from 'route';
-import store from 'store/configure-store';
+import store, {persistor} from 'store/configure-store';
+import 'react-native-devsettings';
 
 const App = () => {
   return (
     <>
       <ProviderRedux store={store}>
-        <Route />
+        <PersistGate persistor={persistor}>
+          <Route />
+        </PersistGate>
       </ProviderRedux>
     </>
   );

@@ -1,6 +1,8 @@
 import configStore from './combinReducer';
 
-const store = configStore();
+const {store, persistor} = configStore();
+
+export {persistor};
 
 export default store;
 
