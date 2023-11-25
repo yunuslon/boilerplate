@@ -7,11 +7,12 @@ module.exports = {
         root: ['./src'],
         alias: {
           screen: './src/screen',
-          route: './src/route',
+          navigation: './src/navigation',
           helpers: './src/helpers',
           assets: './src/assets',
           components: './src/components',
           store: './src/store',
+          shared: './src/shared',
         },
       },
     ],

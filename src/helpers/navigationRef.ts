@@ -1,37 +1,33 @@
-import React from 'react';
-import {
-  StackActions,
-  CommonActions,
-  NavigationContainerRef,
-} from '@react-navigation/native';
+import {createNavigationContainerRef, StackActions} from '@react-navigation/native';
+import {CommonActions} from '@react-navigation/native';
 
-export const navigationRef = React.createRef<NavigationContainerRef<any>>();
+export type TParams = Record<string, string | number | (() => void)>;
 
-export const navigate = (name: string, params?: any) => {
-  navigationRef.current?.navigate(name, params);
-};
+export const navigationRef = createNavigationContainerRef<any>();
 
-export const push = (...args: Parameters<typeof StackActions.push>) => {
-  navigationRef.current?.dispatch(StackActions.push(...args));
-};
+export function goTo(name: string, params: Record<string, any> = {}): void {
+  if (navigationRef.isReady()) {
+    navigationRef.navigate(name, params);
+  }
+}
 
-export const replace = (...args: Parameters<typeof StackActions.replace>) => {
-  navigationRef.current?.dispatch(StackActions.replace(...args));
-};
-
-export const reset = (name: string, params?: any) => {
-  navigationRef.current?.dispatch(
-    CommonActions.reset({
+export function replaceStack(name: string, params: Record<string, any> = {}): void {
+  if (navigationRef.isReady()) {
+    navigationRef.dispatch(StackActions.replace(name, params));
+  }
+}
+export function resetStack(name: string, params: Record<string, any> = {}): void {
+  if (navigationRef.isReady()) {
+    const resetAction = CommonActions.reset({
       index: 0,
       routes: [{name, params}],
-    }),
-  );
-};
+    });
+    navigationRef.dispatch(resetAction);
+  }
+}
 
-export const pop = (...args: Parameters<typeof StackActions.pop>) => {
-  navigationRef.current?.dispatch(StackActions.pop(...args));
-};
-
-export const popToTop = () => {
-  navigationRef.current?.dispatch(StackActions.popToTop());
-};
+export function goBack(): void {
+  if (navigationRef.isReady() && navigationRef.canGoBack()) {
+    navigationRef.goBack();
+  }
+}

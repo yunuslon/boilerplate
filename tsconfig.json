@@ -4,11 +4,12 @@
     "baseUrl": "./src",
     "paths": {
       "screen/*": ["screen/*"],
-      "route/*": ["route/*"],
+      "navigation/*": ["navigation/*"],
       "helpers/*": ["helpers/*"],
       "assets/*": ["assets/*"],
       "components/*": ["components/*"],
-      "store/*": ["store/*"]
+      "store/*": ["store/*"],
+      "shared/*": ["shared/*"]
     }
   }
 }

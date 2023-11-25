@@ -1,9 +1,7 @@
-import {
-  widthPercentageToDP as wp2dp,
-  heightPercentageToDP as hp2dp,
-} from 'react-native-responsive-screen';
+import {widthPercentageToDP as wp2dp, heightPercentageToDP as hp2dp} from 'react-native-responsive-screen';
 
 import {RFValue} from 'react-native-responsive-fontsize';
+import {Dimensions} from 'react-native';
 
 /**
  * Width-Percentage
@@ -35,3 +33,8 @@ export const nz = (size: number) => {
    */
   return RFValue(size);
 };
+
+export const widthDimensionScreen = Dimensions.get('screen').width;
+export const heightDimensionScreen = Dimensions.get('screen').height;
+export const widthDimensionWindow = Dimensions.get('window').width;
+export const heightDimensionWindow = Dimensions.get('window').height;
